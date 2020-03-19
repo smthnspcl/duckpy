@@ -39,4 +39,4 @@ class DuckDuckGo(object):
         return Result.get_all(make_soup(r.read()))
 
 
-__all__ = ["DuckDuckGo"]
+__all__ = ["DuckDuckGo", "query"]

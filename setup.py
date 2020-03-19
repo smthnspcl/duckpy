@@ -17,5 +17,6 @@ setup(
         'Programming Language :: Python :: 3.6',
     ],
     keywords="duckduckgo python search query",
-    packages=find_packages()
+    packages=find_packages(),
+    install_requires=open("requirements.txt").readlines()
 )

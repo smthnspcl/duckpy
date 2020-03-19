@@ -7,6 +7,10 @@ def make_soup(data):
     return BeautifulSoup(data, features="lxml", parser="lxml")
 
 
+def query(q):
+    return DuckDuckGo.query(q)
+
+
 class Result(object):
     url = None
     title = None

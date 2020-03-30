@@ -18,5 +18,6 @@ setup(
     ],
     keywords="duckduckgo python search query",
     packages=find_packages(),
-    install_requires=open("requirements.txt").readlines()
+    install_requires=open("requirements.txt").readlines(),
+    entry_points={'console_scripts': ['duckpy = duckpy.__main__:main']}
 )

@@ -12,8 +12,12 @@ def make_soup(data):
 
 class DuckDuckGo(object):
     @staticmethod
-    def query(q):
+    def query(q, debug=False):
         req = Request(quote("https://duckduckgo.com/lite/?q={0}".format(q), ':/?='))
         req.add_header("User-Agent", generate_navigator_js()["userAgent"])
-        r = urlopen(req)
-        return Result.get_all(make_soup(r.read()))
+        try:
+            return Result.get_all(make_soup(urlopen(req).read()))
+        except Exception as e:
+            if debug:
+                print(e)
+        return None

@@ -1,4 +1,5 @@
 ## duckpy
+[![Build Status](https://build.eberlein.io/buildStatus/icon?job=python_duckpy)](https://build.eberlein.io/job/python_duckpy/)
 ### how to use it
 ```python
 from duckpy import DuckDuckGo
